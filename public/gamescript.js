@@ -1,5 +1,5 @@
 // Connect to the server using Socket.IO
-const socket = io('http://localhost:8000');
+const socket = io('http://35.160.120.126');
 
 // Retrieve room code from localStorage
 const roomCode = localStorage.getItem('roomCode');
