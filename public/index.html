@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #playerName {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #roomCode {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="container">
+    <div id="playerNameWrap">
+        <input type="text" id="playerName" placeholder="Enter Your Name">
+    </div>
+
+    <div id="roomCreation">
+        <button onclick="createRoom()">Create Room</button>
+    </div>
+
+    <div id="roomCode"></div>
+
+    <div id="roomJoin">
+        <input type="text" id="joinCode" placeholder="Enter Room Code">
+        <button onclick="joinRoom()">Join Room</button>
+    </div>
+</div>
+    
+    <script src="scripts.js"></script>
+</body>
+
+</html>

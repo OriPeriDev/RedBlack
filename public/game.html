@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #gameContainer {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1, h2 {
+            margin-top: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #color {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        /* #btn {
+            display: block;
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="gameContainer">
+        <h1>Room Code: <span id="roomCode"></span></h1>
+        <h2>Players:</h2>
+        <ul id="playerList">
+            <!-- Player names will be populated here -->
+        </ul>
+        <button onclick="roll()" id="btn">Start Game</button>
+        <h1 id="color"></h1>
+        <button onclick="disc()" id="disc">Disconnect</button>
+    </div>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="gamescript.js"></script>
+</body>
+
+</html>
