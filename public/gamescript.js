@@ -19,6 +19,12 @@ window.addEventListener('beforeunload', function (event) {
     // Clear local storage
     localStorage.clear();
 });
+document.addEventListener('visibilitychange', function() {
+    if (document.visibilityState === 'hidden') {
+        // Clear local storage when the page is hidden
+        localStorage.clear();
+    }
+});
 
 function roll(){
     socket.emit('roll');
