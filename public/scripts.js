@@ -4,7 +4,7 @@ if(localStorage.getItem('roomCode')!==null)
 function createRoom() {
     const playerName = document.getElementById('playerName').value;
 
-    fetch('https://35.160.120.126/createRoom', {
+    fetch('https://redblack.onrender.com/createRoom', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ function joinRoom() {
     const playerName = document.getElementById('playerName').value;
     const enteredCode = document.getElementById('joinCode').value;
 
-    fetch(`https://35.160.120.126/joinRoom?roomCode=${enteredCode}`, {
+    fetch(`https://redblack.onrender.com/joinRoom?roomCode=${enteredCode}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
